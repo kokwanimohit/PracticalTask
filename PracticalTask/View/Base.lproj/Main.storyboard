@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PracticalTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pwm-2F-1lO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="702"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80v-hD-zub">
+                                <rect key="frame" x="0.0" y="746" width="414" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omq-kK-YVQ">
+                                        <rect key="frame" x="82" y="55" width="250" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Department" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jFv-mK-hAd">
+                                                <rect key="frame" x="10" y="0.0" width="200" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngh-sb-P4X">
+                                                <rect key="frame" x="210" y="0.0" width="40" height="40"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="elh-Fg-QIv">
+                                                        <rect key="frame" x="10" y="12" width="20" height="16"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="OIL-pt-Qjc"/>
+                                                            <constraint firstAttribute="width" secondItem="elh-Fg-QIv" secondAttribute="height" multiplier="1:1" id="wFW-Ih-Ads"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="3q4-Bh-Awk"/>
+                                                    <constraint firstItem="elh-Fg-QIv" firstAttribute="centerX" secondItem="ngh-sb-P4X" secondAttribute="centerX" id="UJ2-PT-HZA"/>
+                                                    <constraint firstItem="elh-Fg-QIv" firstAttribute="centerY" secondItem="ngh-sb-P4X" secondAttribute="centerY" id="VDc-zi-tob"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Oab-Sz-muu"/>
+                                            <constraint firstAttribute="width" constant="250" id="WUW-e7-mYv"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="0.0"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="omq-kK-YVQ" firstAttribute="centerX" secondItem="80v-hD-zub" secondAttribute="centerX" id="5EM-oi-PJN"/>
+                                    <constraint firstAttribute="height" constant="150" id="WWq-Ne-FCx"/>
+                                    <constraint firstItem="omq-kK-YVQ" firstAttribute="centerY" secondItem="80v-hD-zub" secondAttribute="centerY" id="h0t-zR-Aus"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="80v-hD-zub" secondAttribute="bottom" id="4kT-Ud-L6Y"/>
+                            <constraint firstItem="80v-hD-zub" firstAttribute="top" secondItem="pwm-2F-1lO" secondAttribute="bottom" id="PLo-SV-Sc4"/>
+                            <constraint firstItem="pwm-2F-1lO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SSg-Vm-wDd"/>
+                            <constraint firstItem="80v-hD-zub" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V0M-82-pXc"/>
+                            <constraint firstItem="pwm-2F-1lO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="amf-FP-rs4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pwm-2F-1lO" secondAttribute="trailing" id="ckM-t2-MxG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="80v-hD-zub" secondAttribute="trailing" id="clA-v1-gxb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stackSelectDepartment" destination="omq-kK-YVQ" id="xsY-JF-1xx"/>
+                        <outlet property="tableView" destination="pwm-2F-1lO" id="kJk-yQ-r9c"/>
+                        <outlet property="txtFSelectDepartment" destination="jFv-mK-hAd" id="8WK-Lq-Iqe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.144927536231885" y="43.526785714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowtriangle.down.fill" catalog="system" width="128" height="124"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
