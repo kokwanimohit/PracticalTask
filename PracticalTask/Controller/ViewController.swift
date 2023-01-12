@@ -268,6 +268,7 @@ extension ViewController : ValueChangedDelegate{
                 self.someDictionary[key]?.remove(at: index)
             }
         }
+        self.maintainDataSource()
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -311,8 +312,6 @@ extension ViewController : ValueChangedDelegate{
 //MARK: - BtnAddCellDelegate
 extension ViewController : BtnAddCellDelegate{
     func isbtnTapped(section: Int, index: Int) {
-        var data : CellData?
-        
         for (key,_) in someDictionary{
             if key == self.tableViewDataSource[section]{
                 self.someDictionary[key]?.append(CellData.init(section: section, index: index, employeeEmail: "", btnSwitch: false))
